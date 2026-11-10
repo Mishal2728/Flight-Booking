@@ -1,0 +1,100 @@
+/* Contact-only cinematic system. All rules are scoped to the mounted Contact section. */
+.contact-experience{--cx-ink:#f2f1eb;--cx-muted:#b4c3c0;--cx-gold:#d9bd87;--cx-line:rgba(229,235,225,.2);position:relative;overflow:hidden;background:#071923;color:var(--cx-ink);font-family:'DM Sans',sans-serif;isolation:isolate}
+.contact-experience *{box-sizing:border-box}
+.contact-experience .cx-hero{position:relative;min-height:clamp(720px,100svh,1040px);display:flex;flex-direction:column;justify-content:center;overflow:hidden;background:#071923}
+.contact-experience .cx-hero-media-clip{position:absolute;inset:0 0 4%;overflow:hidden;clip-path:inset(0);will-change:clip-path}
+.contact-experience .cx-hero-media{position:absolute;inset:-3% 0;width:100%;height:106%;background-image:image-set('/contact-terminal.webp' type('image/webp'),'/contact-terminal.jpg' type('image/jpeg'));background-size:cover;background-position:center 48%;transform:scale(1);will-change:transform}
+.contact-experience .cx-hero-wash{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,18,28,.9) 0%,rgba(4,18,28,.69) 44%,rgba(4,18,28,.24) 100%),linear-gradient(0deg,#071923 0%,rgba(7,25,35,.08) 48%,rgba(7,25,35,.2) 100%);pointer-events:none}
+.contact-experience .cx-hero-content{position:relative;z-index:1;width:min(1320px,86%);margin:0 auto;padding:64px 0 190px}
+.contact-experience .cx-hero-kicker{display:flex;align-items:center;gap:13px;margin-bottom:26px;color:#e2c992;font-size:10px;font-weight:600;letter-spacing:.24em}
+.contact-experience .cx-hero-kicker span{width:31px;height:1px;background:rgba(226,201,146,.7)}
+.contact-experience .cx-headline{display:flex;flex-wrap:wrap;column-gap:.2em;row-gap:0;max-width:1060px;margin:0;color:#f7f4eb;font-family:'Playfair Display',Georgia,serif;font-size:clamp(60px,8.1vw,116px);font-weight:400;line-height:.99;letter-spacing:-.055em;text-wrap:balance}
+.contact-experience .cx-word-clip{display:inline-block;overflow:hidden;padding:0 0 .08em}
+.contact-experience .cx-word{display:inline-block;will-change:transform,opacity}
+.contact-experience .cx-hero-copy{max-width:520px;margin:24px 0 0;color:#e0e5de;font-size:clamp(15px,1.5vw,19px);line-height:1.75;letter-spacing:.01em}
+.contact-experience .cx-route-wrap{position:absolute;z-index:1;right:7%;bottom:10%;width:min(71%,980px);height:160px;display:flex;align-items:center;gap:17px;color:#d8c18f}
+.contact-experience .cx-route-svg{display:block;flex:1;width:100%;height:100%;overflow:visible}
+.contact-experience .cx-route-path{fill:none;stroke:rgba(231,211,166,.72);stroke-width:1.15;vector-effect:non-scaling-stroke}
+.contact-experience .cx-route-plane{fill:#ead9b2;filter:drop-shadow(0 0 8px rgba(234,217,178,.55))}
+.contact-experience .cx-route-origin,.contact-experience .cx-route-destination{flex:0 0 auto;font-size:8px;letter-spacing:.21em;color:rgba(244,236,215,.78)}
+.contact-experience .cx-scroll-mark{position:absolute;left:7%;bottom:7%;display:flex;align-items:center;gap:10px;color:#c7d1cb;font-size:8px;letter-spacing:.18em}
+.contact-experience .cx-scroll-mark span{display:block;width:25px;height:1px;background:var(--cx-gold)}
+.contact-experience .cx-contact-grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,.92fr) minmax(460px,1.08fr);gap:clamp(55px,9vw,145px);width:min(1320px,86%);margin:-3px auto 0;padding:75px 0 115px}
+.contact-experience .cx-info-column{padding-top:15px}
+.contact-experience .cx-section-index{color:#d2bd8e;font-size:9px;font-weight:600;letter-spacing:.2em}
+.contact-experience .cx-section-index span{padding:0 8px;color:#71827e}
+.contact-experience .cx-info-column h3{margin:26px 0 18px;font-family:'Playfair Display',Georgia,serif;font-size:clamp(40px,5.2vw,70px);font-weight:400;line-height:.99;letter-spacing:-.045em;color:#f0efe7}
+.contact-experience .cx-info-column h3 i,.contact-experience .cx-form-card h3 i{color:var(--cx-gold);font-weight:400}
+.contact-experience .cx-info-intro{max-width:410px;margin:0;color:#bdcbc5;font-size:14px;line-height:1.8}
+.contact-experience .cx-demo-note{display:inline-block;margin:18px 0 6px;padding:9px 11px;border:1px solid rgba(218,195,144,.22);background:rgba(213,188,130,.07);color:#d4c7a5;font-size:10px;line-height:1.5}
+.contact-experience .cx-info-list{display:flex;flex-direction:column;margin-top:22px;border-top:1px solid var(--cx-line)}
+.contact-experience .cx-info-item{position:relative;display:grid;grid-template-columns:42px 1fr 18px;align-items:center;gap:14px;min-height:76px;padding:12px 2px;border-bottom:1px solid var(--cx-line);color:inherit;transition:background .28s,padding .28s}
+.contact-experience .cx-info-item:hover{padding-left:9px;background:linear-gradient(90deg,rgba(219,195,142,.08),transparent 80%)}
+.contact-experience .cx-info-icon{width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(224,210,175,.28);color:#e0c995;transition:transform .32s,border-color .32s,background .32s}
+.contact-experience .cx-info-item:hover .cx-info-icon{transform:translateY(-2px) rotate(-5deg);border-color:#d9bd87;background:rgba(222,198,145,.1)}
+.contact-experience .cx-info-item>span:nth-child(2),.contact-experience .cx-office-row>span:nth-child(2){display:flex;flex-direction:column;gap:6px}
+.contact-experience .cx-info-item small,.contact-experience .cx-office-row small{color:#9caaa5;font-size:8px;font-weight:600;letter-spacing:.16em}
+.contact-experience .cx-info-item b,.contact-experience .cx-office-row b{color:#f2f0e7;font-size:13px;font-weight:500}
+.contact-experience .cx-info-arrow{color:#cfb77f;opacity:.6;transition:transform .25s,opacity .25s}
+.contact-experience .cx-info-item:hover .cx-info-arrow{transform:translateX(4px);opacity:1}
+.contact-experience .cx-office-row{display:grid;grid-template-columns:42px 1fr 18px;align-items:center;gap:14px;padding-top:20px}
+.contact-experience .cx-office-row em{color:#b4c0b8;font-size:10px;font-style:normal}
+.contact-experience .cx-office-clock{color:#cbb783;opacity:.8}
+.contact-experience .cx-form-column{min-width:0;padding-top:0}
+.contact-experience .cx-form-card{position:relative;padding:clamp(25px,3.2vw,44px);background:linear-gradient(145deg,rgba(246,246,238,.97),rgba(227,233,224,.94));color:#25363a;box-shadow:0 28px 90px rgba(0,0,0,.26);border:1px solid rgba(255,255,255,.7)}
+.contact-experience .cx-form-topline{display:flex;justify-content:space-between;gap:18px;padding-bottom:15px;border-bottom:1px solid rgba(38,57,57,.16);color:#6f837b;font-size:8px;font-weight:700;letter-spacing:.14em}
+.contact-experience .cx-form-topline span:last-child{text-align:right;color:#8c958b;font-weight:500}
+.contact-experience .cx-form-card h3{margin:24px 0 8px;font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,3.8vw,48px);font-weight:400;line-height:1.05;letter-spacing:-.04em;color:#203439}
+.contact-experience .cx-form-card h3 i{color:#788c7d}
+.contact-experience .cx-form-lede{margin:0 0 22px;color:#71807b;font-size:12px;line-height:1.65}
+.contact-experience .cx-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px 15px}
+.contact-experience .cx-fields .cx-field:nth-child(3),.contact-experience .cx-fields .cx-field-message{grid-column:1/-1}
+.contact-experience .cx-field{position:relative;display:block;min-width:0;padding-top:7px}
+.contact-experience .cx-field input,.contact-experience .cx-field textarea{display:block;width:100%;min-width:0;padding:17px 1px 9px;border:0;border-bottom:1px solid rgba(41,63,60,.25);border-radius:0;outline:none;background:transparent;color:#23383a;font:500 13px/1.5 'DM Sans',sans-serif;resize:vertical;transition:border-color .25s,box-shadow .25s}
+.contact-experience .cx-field textarea{min-height:83px}
+.contact-experience .cx-field>span{position:absolute;left:1px;top:22px;color:#798982;font-size:11px;pointer-events:none;transform-origin:left center;transition:transform .24s,color .24s,top .24s}
+.contact-experience .cx-field>span small{margin-left:5px;color:#9ba49d;font-size:7px;letter-spacing:.12em}
+.contact-experience .cx-field>i{position:absolute;left:0;right:100%;bottom:0;height:1px;background:#708e7b;transition:right .3s ease}
+.contact-experience .cx-field input:focus,.contact-experience .cx-field textarea:focus{border-color:transparent;box-shadow:none}
+.contact-experience .cx-field input:focus~span,.contact-experience .cx-field input:not(:placeholder-shown)~span,.contact-experience .cx-field textarea:focus~span,.contact-experience .cx-field textarea:not(:placeholder-shown)~span{top:2px;transform:scale(.82);color:#5d7a69}
+.contact-experience .cx-field input:focus~i,.contact-experience .cx-field textarea:focus~i{right:0}
+.contact-experience .cx-form-card.has-validation .cx-field input:invalid:not(:focus),.contact-experience .cx-form-card.has-validation .cx-field textarea:invalid:not(:focus){border-bottom-color:#b97665}
+.contact-experience .cx-validation{margin:14px 0 0;color:#a34f42;font-size:11px}
+.contact-experience .cx-submit{width:100%;min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding:0 17px 0 19px;border:0;background:#19383b;color:#f7f3e8;font:600 11px 'DM Sans',sans-serif;letter-spacing:.07em;text-align:left;transition:background .25s,opacity .25s;will-change:transform}
+.contact-experience .cx-submit:hover{background:#315f58}
+.contact-experience .cx-submit:focus-visible,.contact-experience .cx-explore:focus-visible{outline:2px solid #d9bd87;outline-offset:4px}
+.contact-experience .cx-submit:disabled{opacity:.72;cursor:wait}
+.contact-experience .cx-submit>svg{color:#e1c992;transition:transform .25s}
+.contact-experience .cx-submit:hover>svg{transform:translateX(4px)}
+.contact-experience .cx-spinner{width:16px;height:16px;border:1.5px solid rgba(255,255,255,.38);border-top-color:#e4cf9f;border-radius:50%;animation:cx-spin .8s linear infinite}
+.contact-experience .cx-form-status{min-height:22px;margin-top:12px;color:#74837b;font-size:10px;line-height:1.6}.contact-experience .cx-form-status a{display:inline-block;margin-top:5px;color:#315f58;font-weight:700;text-decoration:underline;text-underline-offset:2px}.contact-experience .cx-demo-note{max-width:400px}
+.contact-experience .cx-faq{margin-top:27px}
+.contact-experience .cx-faq-kicker{margin-bottom:3px;color:#d4be8a;font-size:8px;font-weight:700;letter-spacing:.19em}
+.contact-experience .cx-faq-item{border-bottom:1px solid rgba(232,237,226,.19)}
+.contact-experience .cx-faq-question{width:100%;min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:10px 0;border:0;background:transparent;color:#e9eee7;text-align:left;font:500 12px/1.5 'DM Sans',sans-serif;cursor:pointer;transition:color .2s}
+.contact-experience .cx-faq-question:hover,.contact-experience .cx-faq-question[aria-expanded=true]{color:#e4ca91}
+.contact-experience .cx-faq-question i{width:25px;height:25px;display:grid;place-items:center;border:1px solid rgba(227,210,170,.4);color:#ddc58f;font-style:normal;flex:0 0 auto}
+.contact-experience .cx-faq-answer{overflow:hidden}
+.contact-experience .cx-faq-answer p{max-width:480px;margin:0;padding:0 28px 16px 0;color:#b9c9c0;font-size:11px;line-height:1.7}
+.contact-experience .cx-cta{position:relative;min-height:clamp(360px,48vw,560px);display:grid;place-items:center;overflow:hidden;border-top:1px solid rgba(255,255,255,.09);background:#0c242e;text-align:center}
+.contact-experience .cx-cta-image{position:absolute;inset:-5% 0;width:100%;height:110%;background-image:image-set('/contact-terminal.webp' type('image/webp'),'/contact-terminal.jpg' type('image/jpeg'));background-position:center 63%;background-size:cover;opacity:.58;will-change:transform}
+.contact-experience .cx-cta-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,21,30,.74),rgba(5,21,30,.43),rgba(5,21,30,.74)),linear-gradient(0deg,rgba(5,21,30,.56),rgba(5,21,30,.12))}
+.contact-experience .cx-cta-copy{position:relative;z-index:1;width:min(740px,88%);padding:64px 0}
+.contact-experience .cx-cta-kicker{color:#e0c68f;font-size:9px;font-weight:600;letter-spacing:.22em}
+.contact-experience .cx-cta-copy h3{margin:17px 0 10px;color:#f4f1e7;font:400 clamp(50px,7.5vw,96px)/1 'Playfair Display',Georgia,serif;letter-spacing:-.045em}
+.contact-experience .cx-cta-copy p{margin:0 auto 27px;color:#d2ded8;font-size:14px;line-height:1.7}
+.contact-experience .cx-explore{min-width:190px;min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:20px;padding:0 20px;border:1px solid rgba(235,222,190,.7);background:rgba(16,43,51,.48);color:#f4eedf;font-size:10px;font-weight:600;letter-spacing:.11em;transition:background .25s,border-color .25s}
+.contact-experience .cx-explore:hover{border-color:#e6ce9d;background:rgba(218,190,132,.16)}
+.contact-experience .cx-explore svg{color:#e5cc96;transition:transform .25s}
+.contact-experience .cx-explore:hover svg{transform:translateX(4px)}
+@keyframes cx-spin{to{transform:rotate(360deg)}}
+@media(max-width:1000px){.contact-experience .cx-contact-grid{grid-template-columns:minmax(0,.9fr) minmax(390px,1.1fr);gap:44px;width:90%}.contact-experience .cx-hero-content{width:90%}.contact-experience .cx-route-wrap{width:78%;right:5%}.contact-experience .cx-form-topline span:last-child{max-width:170px}}
+@media(max-width:760px){.contact-experience .cx-hero{min-height:780px;min-height:max(740px,90svh);justify-content:flex-start}.contact-experience .cx-hero-media{background-position:60% center}.contact-experience .cx-hero-wash{background:linear-gradient(90deg,rgba(4,18,28,.83),rgba(4,18,28,.42)),linear-gradient(0deg,#071923 0%,rgba(7,25,35,.06) 62%,rgba(7,25,35,.13))}.contact-experience .cx-hero-content{width:88%;padding:clamp(150px,23vh,220px) 0 190px}.contact-experience .cx-hero-kicker{gap:8px;margin-bottom:22px;font-size:8px;letter-spacing:.16em}.contact-experience .cx-hero-kicker span{width:19px}.contact-experience .cx-headline{max-width:560px;font-size:clamp(52px,13vw,76px);line-height:1.02;column-gap:.18em}.contact-experience .cx-hero-copy{max-width:330px;margin-top:19px;font-size:14px}.contact-experience .cx-route-wrap{right:5%;bottom:12%;width:90%;height:115px;gap:9px}.contact-experience .cx-route-origin,.contact-experience .cx-route-destination{font-size:6px;letter-spacing:.12em}.contact-experience .cx-scroll-mark{left:6%;bottom:7%;font-size:6px;letter-spacing:.13em}.contact-experience .cx-scroll-mark span{width:17px}.contact-experience .cx-contact-grid{grid-template-columns:1fr;width:88%;gap:42px;padding:66px 0 75px}.contact-experience .cx-info-column{padding-top:0}.contact-experience .cx-info-column h3{margin-top:19px;font-size:clamp(42px,10.5vw,58px)}.contact-experience .cx-info-intro{font-size:13px}.contact-experience .cx-info-item{min-height:70px}.contact-experience .cx-info-item b,.contact-experience .cx-office-row b{font-size:12px}.contact-experience .cx-form-column{width:100%}.contact-experience .cx-form-card{padding:24px 20px}.contact-experience .cx-form-topline{font-size:7px}.contact-experience .cx-form-topline span:last-child{max-width:145px}.contact-experience .cx-form-card h3{font-size:36px}.contact-experience .cx-fields{grid-template-columns:1fr;gap:10px}.contact-experience .cx-field-message{grid-column:auto}.contact-experience .cx-faq{margin-top:27px}.contact-experience .cx-cta{min-height:390px}.contact-experience .cx-cta-image{background-position:61% center}.contact-experience .cx-cta-copy{width:88%;padding:54px 0}.contact-experience .cx-cta-copy h3{font-size:clamp(48px,12vw,66px)}.contact-experience .cx-cta-copy p{max-width:300px;font-size:13px}}
+@media(max-width:390px){.contact-experience .cx-headline{font-size:50px}.contact-experience .cx-form-topline{letter-spacing:.08em}.contact-experience .cx-form-topline span:last-child{max-width:125px}}
+@media(prefers-reduced-motion:reduce){.contact-experience .cx-spinner{animation:none;border-top-color:transparent}.contact-experience .cx-word{transform:none!important;opacity:1!important}.contact-experience .cx-info-item,.contact-experience .cx-form-card,.contact-experience .cx-faq,.contact-experience .cx-cta-copy>*{opacity:1!important;transform:none!important;clip-path:none!important}.contact-experience .cx-hero-media-clip{clip-path:none!important}.contact-experience .cx-hero-media,.contact-experience .cx-cta-image{transform:none!important}.contact-experience .cx-route-path{stroke-dasharray:none!important;stroke-dashoffset:0!important}.contact-experience .cx-route-plane{display:none}}
+
+/* Keep the route labels inside the viewport while allowing its curve to flex. */
+.contact-experience .cx-route-wrap{left:7%;right:7%;width:auto;display:grid;grid-template-columns:max-content minmax(0,1fr) max-content}
+.contact-experience .cx-route-svg{min-width:0}
+.contact-experience .cx-route-origin,.contact-experience .cx-route-destination{white-space:nowrap}
+@media(max-width:760px){.contact-experience .cx-route-wrap{left:5%;right:5%;width:auto;grid-template-columns:max-content minmax(0,1fr) max-content;gap:9px}.contact-experience .cx-route-origin,.contact-experience .cx-route-destination{font-size:5.5px;letter-spacing:.1em}}
